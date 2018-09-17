@@ -1,7 +1,7 @@
-﻿using Verse;
-using Harmony;
-using System.Reflection;
+﻿using Harmony;
 using RimWorld;
+using System.Reflection;
+using Verse;
 
 namespace JustIgnoreMePassing
 {
@@ -12,6 +12,17 @@ namespace JustIgnoreMePassing
 		{
 			var harmony = HarmonyInstance.Create("net.pardeike.rimworld.mod.just-ignore-me-passing");
 			harmony.PatchAll(Assembly.GetExecutingAssembly());
+			FireStats.Trigger(true);
+		}
+	}
+
+	[HarmonyPatch(typeof(Game))]
+	[HarmonyPatch("FinalizeInit")]
+	static class Game_FinalizeInit_Patch
+	{
+		static void Postfix()
+		{
+			FireStats.Trigger(false);
 		}
 	}
 
