@@ -12,7 +12,6 @@ namespace JustIgnoreMePassing
 		{
 			var harmony = HarmonyInstance.Create("net.pardeike.rimworld.mod.just-ignore-me-passing");
 			harmony.PatchAll(Assembly.GetExecutingAssembly());
-			FireStats.Trigger(true);
 		}
 	}
 
@@ -22,7 +21,7 @@ namespace JustIgnoreMePassing
 	{
 		static void Postfix()
 		{
-			FireStats.Trigger(false);
+			ModCounter.Trigger();
 		}
 	}
 
