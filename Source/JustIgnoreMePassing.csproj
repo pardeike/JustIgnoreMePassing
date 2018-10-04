@@ -35,6 +35,7 @@
   <ItemGroup>
     <Compile Include="ModCounter.cs" />
     <Compile Include="Main.cs" />
+    <Compile Include="MultiVersionModFix.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
