@@ -31,9 +31,6 @@ namespace JustIgnoreMePassing
 	{
 		static bool Prefix(ref bool __result, Thing constructible, Thing t)
 		{
-			//if (constructible.OccupiedRect().Area > 1)
-			//	return true;
-
 			if (t is Pawn)
 			{
 				__result = false;
