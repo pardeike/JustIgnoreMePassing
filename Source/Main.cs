@@ -1,4 +1,4 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using RimWorld;
 using System.Reflection;
 using Verse;
@@ -10,7 +10,7 @@ namespace JustIgnoreMePassing
 	{
 		static JustIgnoreMePassing()
 		{
-			var harmony = HarmonyInstance.Create("net.pardeike.rimworld.mod.just-ignore-me-passing");
+			var harmony = new Harmony("net.pardeike.rimworld.mod.just-ignore-me-passing");
 			harmony.PatchAll(Assembly.GetExecutingAssembly());
 		}
 	}
@@ -19,7 +19,7 @@ namespace JustIgnoreMePassing
 	[HarmonyPatch("FinalizeInit")]
 	static class Game_FinalizeInit_Patch
 	{
-		static void Postfix()
+		public static void Postfix()
 		{
 			ModCounter.Trigger();
 		}
@@ -29,7 +29,7 @@ namespace JustIgnoreMePassing
 	[HarmonyPatch("BlocksConstruction")]
 	static class GenConstruct_BlocksConstruction_Patch
 	{
-		static bool Prefix(ref bool __result, Thing constructible, Thing t)
+		public static bool Prefix(ref bool __result, Thing t)
 		{
 			if (t is Pawn)
 			{

@@ -2,7 +2,11 @@
 <ModMetaData>
 	<name>Just Ignore Me Passing</name>
 	<author>Andreas Pardeike</author>
-	<targetVersion>1.0.0</targetVersion>
+	<supportedVersions>
+		<li>1.0</li>
+		<li>1.1</li>
+	</supportedVersions>
+	<packageId>brrainz.justignoremepassing</packageId>
 	<description>Excuse me. I need to pass here where you work. Please keep going.
 
 Powered by Harmony Patch Library
