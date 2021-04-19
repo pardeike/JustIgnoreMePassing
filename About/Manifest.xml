@@ -15,6 +15,6 @@
   </loadBefore>
   <loadAfter>
   </loadAfter>
-  <manifestUri>https://raw.githubusercontent.com/pardeike/JustIgnoreMePassing/master/About/Manifest.xml</manifestUri>
+  <manifestUri>https://raw.githubusercontent.com/pardeike/JustIgnoreMePassing/latest/About/Manifest.xml</manifestUri>
   <downloadUri>https://github.com/pardeike/JustIgnoreMePassing/releases/latest</downloadUri>
 </Manifest>
