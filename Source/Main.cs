@@ -14,8 +14,7 @@ namespace JustIgnoreMePassing
 		}
 	}
 
-	[HarmonyPatch(typeof(Game))]
-	[HarmonyPatch("FinalizeInit")]
+	[HarmonyPatch(typeof(Game), nameof(Game.FinalizeInit))]
 	static class Game_FinalizeInit_Patch
 	{
 		public static void Postfix()
@@ -24,8 +23,7 @@ namespace JustIgnoreMePassing
 		}
 	}
 
-	[HarmonyPatch(typeof(GenConstruct))]
-	[HarmonyPatch("BlocksConstruction")]
+	[HarmonyPatch(typeof(GenConstruct), nameof(GenConstruct.BlocksConstruction))]
 	static class GenConstruct_BlocksConstruction_Patch
 	{
 		public static bool Prefix(ref bool __result, Thing t)
