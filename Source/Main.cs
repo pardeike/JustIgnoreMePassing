@@ -1,4 +1,5 @@
-﻿using HarmonyLib;
+﻿using Brrainz;
+using HarmonyLib;
 using RimWorld;
 using Verse;
 
@@ -11,6 +12,8 @@ namespace JustIgnoreMePassing
 		{
 			var harmony = new Harmony("net.pardeike.rimworld.mod.just-ignore-me-passing");
 			harmony.PatchAll();
+
+			CrossPromotion.Install(76561197973010050);
 		}
 	}
 
