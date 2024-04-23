@@ -1,0 +1,11 @@
+﻿<Project>
+
+	<PropertyGroup>
+		<ModName>Just Ignore Me Passing</ModName>
+		<ModFileName>JustIgnoreMePassing</ModFileName>
+		<Repository>https://github.com/pardeike/JustIgnoreMePassing</Repository>
+		<ModVersion>2.7.6.0</ModVersion>
+		<ProjectGuid>{D83F8936-4206-45C6-BCC8-8148B55A7313}</ProjectGuid>
+	</PropertyGroup>
+
+</Project>
